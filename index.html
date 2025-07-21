@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Planos - Comparativo de Preços</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Applying Inter font to the body */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Simple animation for hover effects */
+        .pricing-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto px-4 py-12 md:py-20">
+
+        <!-- Header Section -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Planos Flexíveis para o seu Sucesso</h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Encontre a solução perfeita que se adapta ao crescimento do seu negócio. Compare os recursos e escolha o plano ideal para você.</p>
+        </div>
+
+        <!-- Pricing Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+
+            <!-- Plano 1: Básico -->
+            <div class="pricing-card bg-white rounded-xl shadow-lg p-8 flex flex-col">
+                <h3 class="text-2xl font-bold text-center mb-4">Plano Básico</h3>
+                <p class="text-center mb-6 text-gray-500">Ideal para começar a organizar seus contatos.</p>
+                <div class="text-center my-4">
+                    <span class="text-5xl font-extrabold text-gray-900">R$ 347</span>
+                    <span class="text-lg font-medium text-gray-500">/mês</span>
+                </div>
+                <ul class="space-y-4 text-gray-700 my-8 flex-grow">
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Apenas CRM
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Suporte Técnico
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        OnBoarding por vídeos pré-gravados
+                    </li>
+                </ul>
+                <a href="#" class="w-full text-center bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition-colors duration-300 mt-6">Contratar Plano</a>
+            </div>
+
+            <!-- Plano 2: Pro -->
+            <div class="pricing-card bg-white rounded-xl shadow-lg p-8 flex flex-col">
+                <h3 class="text-2xl font-bold text-center mb-4">Plano Pro</h3>
+                <p class="text-center mb-6 text-gray-500">Para equipes que buscam automação e crescimento.</p>
+                <div class="text-center my-4">
+                    <span class="text-5xl font-extrabold text-gray-900">R$ 3.470</span>
+                    <span class="text-lg font-medium text-gray-500">/mês</span>
+                </div>
+                <ul class="space-y-4 text-gray-700 my-8 flex-grow">
+                     <li class="flex items-center">
+                        <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        2 Usuários de CRM
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Máquina de conexão LinkedIn
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Suporte Técnico
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        OnBoarding por vídeos pré-gravados
+                    </li>
+                </ul>
+                <a href="#" class="w-full text-center bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition-colors duration-300 mt-6">Contratar Plano</a>
+            </div>
+
+            <!-- Plano 3: Empresarial (Highlighted) -->
+            <div class="pricing-card bg-indigo-600 text-white rounded-xl shadow-2xl p-8 flex flex-col relative overflow-hidden">
+                <span class="absolute top-0 right-0 bg-yellow-300 text-indigo-900 text-xs font-bold px-4 py-1" style="transform: rotate(45deg) translate(25%, -25%); transform-origin: top right;">MAIS POPULAR</span>
+                <h3 class="text-2xl font-bold text-center mb-4">Plano Empresarial</h3>
+                <p class="text-center mb-6 text-indigo-200">A solução completa para escalar suas vendas.</p>
+                <div class="text-center my-4">
+                    <span class="text-5xl font-extrabold">R$ 5.700</span>
+                    <span class="text-lg font-medium text-indigo-200">/mês</span>
+                </div>
+                <ul class="space-y-4 text-indigo-100 my-8 flex-grow">
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-yellow-300 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Tudo do plano Pro+
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-yellow-300 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        OnBoarding com suporte humanizado
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-yellow-300 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Criação de Copys para LinkedIn
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-yellow-300 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Whatsapp sem custo mensal
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-yellow-300 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Criação de cadências e processos
+                    </li>
+                </ul>
+                <a href="#" class="w-full text-center bg-white text-indigo-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors duration-300 mt-6">Contratar Plano</a>
+            </div>
+
+            <!-- Plano 4: Enterprise -->
+            <div class="pricing-card bg-white rounded-xl shadow-lg p-8 flex flex-col">
+                <h3 class="text-2xl font-bold text-center mb-4">Plano Enterprise</h3>
+                <p class="text-center mb-6 text-gray-500">Para operações que demandam consultoria estratégica.</p>
+                <div class="text-center my-4">
+                    <span class="text-4xl md:text-5xl font-extrabold text-gray-900">Valor a consultar</span>
+                </div>
+                <ul class="space-y-4 text-gray-700 my-8 flex-grow">
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Tudo do plano Empresarial+
+                    </li>
+                    <li class="flex items-center font-semibold text-indigo-600">
+                        <svg class="w-6 h-6 text-indigo-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Consultoria comercial (1-2x/mês)
+                    </li>
+                </ul>
+                <a href="#" class="w-full text-center bg-gray-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-900 transition-colors duration-300 mt-6">Fale Conosco</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+
