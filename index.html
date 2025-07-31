@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nossos Planos - Comparativo de Preços</title>
+    <title>Nossos Planos - A Solução Completa para sua Operação</title>
     
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -13,6 +13,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
+    <script>
+        // Customizing Tailwind with brand colors
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-purple': '#5f259f',
+                        'brand-green': '#26d367',
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
         /* Applying Inter font to the body */
         body {
@@ -21,10 +35,19 @@
         /* Simple animation for hover effects */
         .pricing-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e5e7eb; /* Light border for all cards */
         }
         .pricing-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .feature-item {
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        .feature-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
         }
     </style>
 </head>
@@ -32,121 +55,168 @@
 
     <div class="container mx-auto px-4 py-12 md:py-20">
 
-        <!-- Header Section -->
+        <!-- Logo Section -->
         <div class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Planos Flexíveis para o seu Sucesso</h1>
-            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Encontre a solução perfeita que se adapta ao crescimento do seu negócio. Compare os recursos e escolha o plano ideal para você.</p>
+            <img src="https://storage.googleapis.com/gemini-prod-us-central1-918235905595-public/images/0511195d-2092-4f35-97e3-0c464c8b010b.png" alt="Logo da crm.people" class="h-16 w-auto mx-auto">
+        </div>
+
+        <!-- Header Section -->
+        <div class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">A solução completa para sua operação comercial</h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Compare nossos planos e descubra qual se encaixa perfeitamente na sua estratégia de crescimento.</p>
         </div>
 
         <!-- Pricing Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-screen-2xl mx-auto">
 
             <!-- Plano 1: Básico -->
-            <div class="pricing-card bg-white rounded-xl shadow-lg p-8 flex flex-col">
-                <h3 class="text-2xl font-bold text-center mb-4">Plano Básico</h3>
-                <p class="text-center mb-6 text-gray-500">Ideal para começar a organizar seus contatos.</p>
+            <div class="pricing-card bg-white rounded-xl shadow-md p-8 flex flex-col">
+                <h3 class="text-2xl font-bold text-center mb-2">Plano Básico</h3>
+                <p class="text-center h-12 text-gray-500 mb-6">Para organizar seu processo comercial com eficiência.</p>
                 <div class="text-center my-4">
-                    <span class="text-5xl font-extrabold text-gray-900">R$ 347</span>
+                    <span class="text-5xl font-extrabold text-gray-900">R$ 197</span>
                     <span class="text-lg font-medium text-gray-500">/mês</span>
                 </div>
                 <ul class="space-y-4 text-gray-700 my-8 flex-grow">
-                    <li class="flex items-center">
-                        <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        Apenas CRM
+                    <li class="flex items-start feature-item">
+                        <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong>CRM Completo</strong> para gestão de clientes</span>
                     </li>
-                    <li class="flex items-center">
-                        <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        Suporte Técnico
+                    <li class="flex items-start feature-item">
+                        <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong>Suporte Técnico</strong> via chat por WhatsApp</span>
                     </li>
-                    <li class="flex items-center">
-                        <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        OnBoarding por vídeos pré-gravados
+                    <li class="flex items-start feature-item">
+                        <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong>OnBoarding</strong> com vídeos tutoriais</span>
+                    </li>
+                    <li class="flex items-start feature-item">
+                        <svg class="w-6 h-6 text-brand-purple mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <div>
+                            <strong>Integração WhatsApp</strong> (Opcional)
+                            <p class="text-xs text-gray-500 mt-1">Taxa de ativação de R$ 397 + custo por uso da Meta.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-brand-purple mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <div>
+                            <strong>Telefonia VoIP com IA</strong> (Opcional)
+                            <p class="text-xs text-gray-500 mt-1">R$ 60/ramal com ligações ilimitadas, gravação e análise por IA.</p>
+                        </div>
                     </li>
                 </ul>
-                <a href="#" class="w-full text-center bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition-colors duration-300 mt-6">Contratar Plano</a>
+                <a href="https://youtube.com/shorts/0Kt6FPWTMEQ?si=BRSmS_jkIFIz_iwE" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition-colors duration-300 mt-8">Começar Agora</a>
             </div>
 
             <!-- Plano 2: Pro -->
-            <div class="pricing-card bg-white rounded-xl shadow-lg p-8 flex flex-col">
-                <h3 class="text-2xl font-bold text-center mb-4">Plano Pro</h3>
-                <p class="text-center mb-6 text-gray-500">Para equipes que buscam automação e crescimento.</p>
+            <div class="pricing-card bg-white rounded-xl shadow-md p-8 flex flex-col">
+                <h3 class="text-2xl font-bold text-center mb-2">Plano Pro</h3>
+                <p class="text-center h-12 text-gray-500 mb-6">Para automatizar a prospecção e acelerar o crescimento.</p>
                 <div class="text-center my-4">
                     <span class="text-5xl font-extrabold text-gray-900">R$ 3.470</span>
                     <span class="text-lg font-medium text-gray-500">/mês</span>
                 </div>
                 <ul class="space-y-4 text-gray-700 my-8 flex-grow">
-                     <li class="flex items-center">
-                        <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        2 Usuários de CRM
+                    <li class="flex items-start feature-item">
+                        <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong>2 Usuários de CRM</strong> inclusos</span>
                     </li>
-                    <li class="flex items-center">
-                        <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        Máquina de conexão LinkedIn
+                    <li class="flex items-start feature-item">
+                        <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong>Máquina de Prospecção</strong> para LinkedIn</span>
                     </li>
-                    <li class="flex items-center">
-                        <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        Suporte Técnico
+                    <li class="flex items-start feature-item">
+                        <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong>Suporte Técnico</strong> via Chat e Reunião</span>
                     </li>
-                    <li class="flex items-center">
-                        <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        OnBoarding por vídeos pré-gravados
+                    <li class="flex items-start feature-item">
+                        <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong>OnBoarding</strong> com vídeos tutoriais</span>
+                    </li>
+                    <li class="flex items-start feature-item">
+                         <svg class="w-6 h-6 text-brand-purple mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <div>
+                            <strong>Integração WhatsApp</strong> (Opcional)
+                            <p class="text-xs text-gray-500 mt-1">Taxa de ativação de R$ 397 + custo por uso da Meta.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-brand-purple mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <div>
+                            <strong>Telefonia VoIP com IA</strong> (Opcional)
+                            <p class="text-xs text-gray-500 mt-1">R$ 60/ramal com ligações ilimitadas, gravação e análise por IA.</p>
+                        </div>
                     </li>
                 </ul>
-                <a href="#" class="w-full text-center bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition-colors duration-300 mt-6">Contratar Plano</a>
+                <a href="https://www.youtube.com/watch?v=E4WcqPE9xzU" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition-colors duration-300 mt-8">Contratar Plano</a>
             </div>
 
             <!-- Plano 3: Empresarial (Highlighted) -->
-            <div class="pricing-card bg-indigo-600 text-white rounded-xl shadow-2xl p-8 flex flex-col relative overflow-hidden">
-                <span class="absolute top-0 right-0 bg-yellow-300 text-indigo-900 text-xs font-bold px-4 py-1" style="transform: rotate(45deg) translate(25%, -25%); transform-origin: top right;">MAIS POPULAR</span>
-                <h3 class="text-2xl font-bold text-center mb-4">Plano Empresarial</h3>
-                <p class="text-center mb-6 text-indigo-200">A solução completa para escalar suas vendas.</p>
+            <div class="pricing-card bg-brand-purple text-white rounded-xl shadow-2xl p-8 flex flex-col relative transform scale-105">
+                <span class="absolute top-4 -right-0.5 bg-brand-green text-brand-purple text-xs font-bold px-4 py-1 rounded-l-md">MAIS POPULAR</span>
+                <h3 class="text-2xl font-bold text-center mb-2">Plano Empresarial</h3>
+                <p class="text-center h-12 text-purple-200 mb-6">A solução completa com suporte estratégico para escalar suas vendas.</p>
                 <div class="text-center my-4">
                     <span class="text-5xl font-extrabold">R$ 5.700</span>
-                    <span class="text-lg font-medium text-indigo-200">/mês</span>
+                    <span class="text-lg font-medium text-purple-200">/mês</span>
                 </div>
-                <ul class="space-y-4 text-indigo-100 my-8 flex-grow">
-                    <li class="flex items-center">
-                        <svg class="w-6 h-6 text-yellow-300 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        Tudo do plano Pro+
+                <ul class="space-y-4 text-purple-100 my-8 flex-grow">
+                    <li class="flex items-start feature-item border-purple-500">
+                        <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong>Tudo do plano Pro</strong>, e mais:</span>
                     </li>
-                    <li class="flex items-center">
-                        <svg class="w-6 h-6 text-yellow-300 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        OnBoarding com suporte humanizado
+                    <li class="flex items-start feature-item border-purple-500">
+                        <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong>OnBoarding Humanizado</strong> e individual</span>
                     </li>
-                    <li class="flex items-center">
-                        <svg class="w-6 h-6 text-yellow-300 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        Criação de Copys para LinkedIn
+                    <li class="flex items-start feature-item border-purple-500">
+                        <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong>Suporte Comercial Estratégico</strong> (Chat e Reunião)</span>
                     </li>
-                    <li class="flex items-center">
-                        <svg class="w-6 h-6 text-yellow-300 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        Whatsapp sem custo mensal
+                    <li class="flex items-start feature-item border-purple-500">
+                        <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span>Criação de <strong>Copys e Cadências de Vendas</strong></span>
                     </li>
-                    <li class="flex items-center">
-                        <svg class="w-6 h-6 text-yellow-300 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        Criação de cadências e processos
+                    <li class="flex items-start feature-item border-purple-500">
+                        <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <div>
+                            <strong>Integração WhatsApp</strong> <span class="text-xs bg-brand-green text-brand-purple font-bold px-2 py-0.5 rounded-full ml-1">INCLUSA</span>
+                            <p class="text-xs text-purple-200 mt-1">Ativação gratuita. Custo por uso da Meta não incluso.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                         <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <div>
+                            <strong>2 Ramais de Telefonia VoIP</strong> <span class="text-xs bg-brand-green text-brand-purple font-bold px-2 py-0.5 rounded-full ml-1">GRÁTIS</span>
+                            <p class="text-xs text-purple-200 mt-1">Com ligações ilimitadas, gravação e análise por IA.</p>
+                        </div>
                     </li>
                 </ul>
-                <a href="#" class="w-full text-center bg-white text-indigo-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors duration-300 mt-6">Contratar Plano</a>
+                <a href="https://www.youtube.com/watch?v=GBIIQ0kP15E" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-white text-brand-purple font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors duration-300 mt-8">Quero o Melhor Plano</a>
             </div>
 
-            <!-- Plano 4: Enterprise -->
-            <div class="pricing-card bg-white rounded-xl shadow-lg p-8 flex flex-col">
-                <h3 class="text-2xl font-bold text-center mb-4">Plano Enterprise</h3>
-                <p class="text-center mb-6 text-gray-500">Para operações que demandam consultoria estratégica.</p>
+            <!-- Plano 4: Growth -->
+            <div class="pricing-card bg-white rounded-xl shadow-md p-8 flex flex-col">
+                <h3 class="text-2xl font-bold text-center mb-2">Plano Growth</h3>
+                <p class="text-center h-12 text-gray-500 mb-6">Para grandes equipes que precisam de consultoria e personalização.</p>
                 <div class="text-center my-4">
-                    <span class="text-4xl md:text-5xl font-extrabold text-gray-900">Valor a consultar</span>
+                    <span class="text-4xl font-extrabold text-gray-900">Sob Consulta</span>
                 </div>
                 <ul class="space-y-4 text-gray-700 my-8 flex-grow">
-                    <li class="flex items-center">
-                        <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        Tudo do plano Empresarial+
+                    <li class="flex items-start feature-item">
+                        <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong>10+ Usuários de CRM</strong></span>
                     </li>
-                    <li class="flex items-center font-semibold text-indigo-600">
-                        <svg class="w-6 h-6 text-indigo-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        Consultoria comercial (1-2x/mês)
+                    <li class="flex items-start feature-item">
+                        <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong>Tudo do plano Empresarial</strong>, e mais:</span>
+                    </li>
+                    <li class="flex items-start font-semibold text-brand-purple">
+                        <svg class="w-6 h-6 text-brand-purple mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong>Consultoria Comercial Estratégica</strong> (1 a 2x por mês)</span>
                     </li>
                 </ul>
-                <a href="#" class="w-full text-center bg-gray-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-900 transition-colors duration-300 mt-6">Fale Conosco</a>
+                <a href="https://youtube.com/shorts/4OV9SV38pq8?si=5aDMBPz1clZsv2V6" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-gray-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-900 transition-colors duration-300 mt-8">Fale com um Especialista</a>
             </div>
 
         </div>
@@ -155,4 +225,3 @@
 
 </body>
 </html>
-
