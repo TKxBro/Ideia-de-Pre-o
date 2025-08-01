@@ -49,6 +49,9 @@
             border-bottom: none;
             padding-bottom: 0;
         }
+        .highlighted-card {
+            border-color: #5f259f;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -67,15 +70,16 @@
         </div>
 
         <!-- Pricing Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-screen-2xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-screen-2xl mx-auto items-start">
 
             <!-- Plano 1: Básico -->
-            <div class="pricing-card bg-white rounded-xl shadow-md p-8 flex flex-col">
+            <div class="pricing-card bg-white rounded-xl shadow-md p-8 flex flex-col h-full">
                 <h3 class="text-2xl font-bold text-center mb-2">Plano Básico</h3>
                 <p class="text-center h-12 text-gray-500 mb-6">Para organizar seu processo comercial com eficiência.</p>
                 <div class="text-center my-4">
                     <span class="text-5xl font-extrabold text-gray-900">R$ 197</span>
                     <span class="text-lg font-medium text-gray-500">/mês</span>
+                    <p class="text-sm text-gray-500">por usuário</p>
                 </div>
                 <ul class="space-y-4 text-gray-700 my-8 flex-grow">
                     <li class="flex items-start feature-item">
@@ -93,8 +97,8 @@
                     <li class="flex items-start feature-item">
                         <svg class="w-6 h-6 text-brand-purple mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         <div>
-                            <strong>Integração WhatsApp</strong> (Opcional)
-                            <p class="text-xs text-gray-500 mt-1">Taxa de ativação de R$ 397 + custo por uso da Meta.</p>
+                            <strong>WhatsApp API Oficial</strong> (Opcional)
+                            <p class="text-xs text-gray-500 mt-1">R$ 397/mês + custo por uso da Meta.</p>
                         </div>
                     </li>
                     <li class="flex items-start">
@@ -109,9 +113,9 @@
             </div>
 
             <!-- Plano 2: Pro -->
-            <div class="pricing-card bg-white rounded-xl shadow-md p-8 flex flex-col">
+            <div class="pricing-card bg-white rounded-xl shadow-md p-8 flex flex-col h-full">
                 <h3 class="text-2xl font-bold text-center mb-2">Plano Pro</h3>
-                <p class="text-center h-12 text-gray-500 mb-6">Para automatizar a prospecção e acelerar o crescimento.</p>
+                <p class="text-center h-12 text-gray-500 mb-6">Para automatizar a prospecção e gerar demanda qualificada.</p>
                 <div class="text-center my-4">
                     <span class="text-5xl font-extrabold text-gray-900">R$ 3.470</span>
                     <span class="text-lg font-medium text-gray-500">/mês</span>
@@ -123,7 +127,10 @@
                     </li>
                     <li class="flex items-start feature-item">
                         <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span><strong>Máquina de Prospecção</strong> para LinkedIn</span>
+                        <div>
+                            <strong>Máquina de Prospecção LinkedIn</strong>
+                            <p class="text-xs text-gray-500 mt-1">Geração de +100 MQLs/mês</p>
+                        </div>
                     </li>
                     <li class="flex items-start feature-item">
                         <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
@@ -136,8 +143,8 @@
                     <li class="flex items-start feature-item">
                          <svg class="w-6 h-6 text-brand-purple mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         <div>
-                            <strong>Integração WhatsApp</strong> (Opcional)
-                            <p class="text-xs text-gray-500 mt-1">Taxa de ativação de R$ 397 + custo por uso da Meta.</p>
+                            <strong>WhatsApp API Oficial</strong> (Opcional)
+                            <p class="text-xs text-gray-500 mt-1">R$ 397/mês + custo por uso da Meta.</p>
                         </div>
                     </li>
                     <li class="flex items-start">
@@ -152,7 +159,7 @@
             </div>
 
             <!-- Plano 3: Empresarial (Highlighted) -->
-            <div class="pricing-card bg-brand-purple text-white rounded-xl shadow-2xl p-8 flex flex-col relative transform scale-105">
+            <div class="pricing-card bg-brand-purple text-white rounded-xl shadow-2xl p-8 flex flex-col relative transform scale-105 h-full highlighted-card">
                 <span class="absolute top-4 -right-0.5 bg-brand-green text-brand-purple text-xs font-bold px-4 py-1 rounded-l-md">MAIS POPULAR</span>
                 <h3 class="text-2xl font-bold text-center mb-2">Plano Empresarial</h3>
                 <p class="text-center h-12 text-purple-200 mb-6">A solução completa com suporte estratégico para escalar suas vendas.</p>
@@ -163,7 +170,14 @@
                 <ul class="space-y-4 text-purple-100 my-8 flex-grow">
                     <li class="flex items-start feature-item border-purple-500">
                         <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span><strong>Tudo do plano Pro</strong>, e mais:</span>
+                        <span><strong>5 Usuários de CRM</strong> inclusos</span>
+                    </li>
+                    <li class="flex items-start feature-item border-purple-500">
+                        <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <div>
+                            <strong>Máquina de Prospecção LinkedIn</strong>
+                             <p class="text-xs text-purple-200 mt-1">Geração de +100 MQLs/mês</p>
+                        </div>
                     </li>
                     <li class="flex items-start feature-item border-purple-500">
                         <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
@@ -171,7 +185,7 @@
                     </li>
                     <li class="flex items-start feature-item border-purple-500">
                         <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span><strong>Suporte Comercial Estratégico</strong> (Chat e Reunião)</span>
+                        <span><strong>Suporte Comercial Estratégico</strong></span>
                     </li>
                     <li class="flex items-start feature-item border-purple-500">
                         <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
@@ -180,40 +194,66 @@
                     <li class="flex items-start feature-item border-purple-500">
                         <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                         <div>
-                            <strong>Integração WhatsApp</strong> <span class="text-xs bg-brand-green text-brand-purple font-bold px-2 py-0.5 rounded-full ml-1">INCLUSA</span>
-                            <p class="text-xs text-purple-200 mt-1">Ativação gratuita. Custo por uso da Meta não incluso.</p>
+                            <strong>Acesso à People Academy</strong>
+                            <p class="text-xs text-purple-200 mt-1">Plataforma de cursos para aprimorar habilidades comerciais.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start feature-item border-purple-500">
+                        <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <div>
+                            <strong>WhatsApp API Oficial</strong> <span class="text-xs bg-brand-green text-brand-purple font-bold px-2 py-0.5 rounded-full ml-1">SETUP GRÁTIS</span>
+                            <p class="text-xs text-purple-200 mt-1">Custo por uso da Meta não incluso.</p>
                         </div>
                     </li>
                     <li class="flex items-start">
                          <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                         <div>
-                            <strong>2 Ramais de Telefonia VoIP</strong> <span class="text-xs bg-brand-green text-brand-purple font-bold px-2 py-0.5 rounded-full ml-1">GRÁTIS</span>
-                            <p class="text-xs text-purple-200 mt-1">Com ligações ilimitadas, gravação e análise por IA.</p>
+                            <strong>5 Ramais de Telefonia VoIP</strong> <span class="text-xs bg-brand-green text-brand-purple font-bold px-2 py-0.5 rounded-full ml-1">GRÁTIS</span>
+                            <p class="text-xs text-purple-200 mt-1">Com ligações ilimitadas e análise por IA.</p>
                         </div>
                     </li>
                 </ul>
                 <a href="https://www.youtube.com/watch?v=GBIIQ0kP15E" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-white text-brand-purple font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors duration-300 mt-8">Quero o Melhor Plano</a>
             </div>
 
-            <!-- Plano 4: Growth -->
-            <div class="pricing-card bg-white rounded-xl shadow-md p-8 flex flex-col">
-                <h3 class="text-2xl font-bold text-center mb-2">Plano Growth</h3>
-                <p class="text-center h-12 text-gray-500 mb-6">Para grandes equipes que precisam de consultoria e personalização.</p>
+            <!-- Plano 4: Social Selling Growth -->
+            <div class="pricing-card bg-white rounded-xl shadow-md p-8 flex flex-col h-full">
+                <h3 class="text-2xl font-bold text-center mb-2">Social Selling Growth</h3>
+                <p class="text-center h-12 text-gray-500 mb-6">Consultoria e execução completa para dominar seu mercado.</p>
                 <div class="text-center my-4">
                     <span class="text-4xl font-extrabold text-gray-900">Sob Consulta</span>
                 </div>
                 <ul class="space-y-4 text-gray-700 my-8 flex-grow">
                     <li class="flex items-start feature-item">
                         <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span><strong>10+ Usuários de CRM</strong></span>
-                    </li>
-                    <li class="flex items-start feature-item">
-                        <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                         <span><strong>Tudo do plano Empresarial</strong>, e mais:</span>
                     </li>
-                    <li class="flex items-start font-semibold text-brand-purple">
+                     <li class="flex items-start feature-item font-semibold text-brand-purple">
                         <svg class="w-6 h-6 text-brand-purple mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span><strong>Consultoria Comercial Estratégica</strong> (1 a 2x por mês)</span>
+                        <span><strong>Usuários de CRM</strong> (Sob Consulta)</span>
+                    </li>
+                     <li class="flex items-start feature-item font-semibold text-brand-purple">
+                        <svg class="w-6 h-6 text-brand-purple mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong>Consultoria com Expert em Vendas</strong> (1-2x/mês)</span>
+                    </li>
+                     <li class="flex items-start feature-item font-semibold text-brand-purple">
+                        <svg class="w-6 h-6 text-brand-purple mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <div>
+                            <strong>1 Back Office Comercial Dedicado</strong>
+                            <p class="text-xs text-gray-500 mt-1">1 colaborador (6h/dia) para gestão de CRM, LinkedIn, WhatsApp e relatórios.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start feature-item">
+                         <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong>Gestão de Conteúdo LinkedIn</strong> (16 posts/mês)</span>
+                    </li>
+                    <li class="flex items-start feature-item">
+                         <svg class="w-6 h-6 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong>Desenvolvimento de Estratégias</strong> (Prospecção, Qualificação, Fechamento)</span>
+                    </li>
+                    <li class="flex items-start font-semibold text-brand-purple">
+                         <svg class="w-6 h-6 text-brand-purple mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong>Telefonia VoIP</strong> (Sob Consulta)</span>
                     </li>
                 </ul>
                 <a href="https://youtube.com/shorts/4OV9SV38pq8?si=5aDMBPz1clZsv2V6" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-gray-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-900 transition-colors duration-300 mt-8">Fale com um Especialista</a>
